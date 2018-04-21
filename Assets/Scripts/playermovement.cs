@@ -27,6 +27,7 @@ public class playermovement : MonoBehaviour
         float inZ = Input.GetAxis(axisVert);
         theRigidBody.velocity = new Vector3(inX * walkSpeed, 0f, inZ * walkSpeed);
         GetComponent<Animator>().SetFloat("speed", theRigidBody.velocity.magnitude);
+        transform.rotation = Quaternion.LookRotation(theRigidBody.velocity);
     }
 
 }
