@@ -20,8 +20,12 @@ public class RollingController : MonoBehaviour {
             if (Input.GetButtonDown("P" + i + "Collect") && collision.transform.Find("WeedContainer(Clone)") != null)
             {
                 NugDetails weednug = collision.transform.Find("WeedContainer(Clone)").GetComponent<NugDetails>();
-                weednug.currentState = NugDetails.State.Rolled;
-                weednug.updateModel();
+                if (weednug.GetComponent<NugDetails>().currentState == NugDetails.State.Grinded)
+                {
+                   
+                    weednug.currentState = NugDetails.State.Rolled;
+                    weednug.updateModel();
+                }
             }
         }
 
