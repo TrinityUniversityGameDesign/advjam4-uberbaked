@@ -24,7 +24,10 @@ public class DeliverContoller : MonoBehaviour {
                 collision.transform.GetComponent<collection>().unsetCarry();
                 GameObject weednug = collision.transform.Find("WeedContainer(Clone)").gameObject;
                 GameObject.Destroy(weednug);
-                gameController.GetComponent<CentralGameController>().incrementScore();
+                if (weednug.GetComponent<NugDetails>().currentState == NugDetails.State.Rolled)
+                {
+                    gameController.GetComponent<CentralGameController>().incrementScore();
+                }
             }
         }
 
