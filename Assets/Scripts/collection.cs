@@ -32,8 +32,8 @@ public class collection : MonoBehaviour {
         }
         if (iscarrying && Input.GetButtonDown(buttonRelease))
         {
-            // collision.transform.parent = null;
-            transform.DetachChildren();
+            collision.transform.parent = null;
+           // transform.DetachChildren();
             iscarrying = false;
         }
     }
