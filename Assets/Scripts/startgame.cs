@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class startgame : MonoBehaviour {
     public string buttonStart;
+   // public AudioSource aud;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,7 +16,9 @@ public class startgame : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown(buttonStart))
         {
+          //  aud.Stop();
             SceneManager.LoadScene("MainScene");
+
         }
 	}
 

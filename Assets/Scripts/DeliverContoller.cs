@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DeliverContoller : MonoBehaviour {
 
-    public GameObject gameController; 
+    public GameObject gameController;
+    public AudioClip deliv;
+    public AudioSource deliverer; 
+    
 	// Use this for initialization
 	void Start () {
         gameController = GameObject.Find("GameController");
+        deliverer = GameObject.Find("delivered").GetComponent<AudioSource>();
+        deliv = Resources.Load<AudioClip>("Sounds/coin");
+
 	}
 	
 	// Update is called once per frame
@@ -26,7 +33,11 @@ public class DeliverContoller : MonoBehaviour {
                 GameObject.Destroy(weednug);
                 if (weednug.GetComponent<NugDetails>().currentState == NugDetails.State.Rolled)
                 {
+                    deliverer.PlayOneShot(deliv);
                     gameController.GetComponent<CentralGameController>().incrementScore();
+                    
+
+
                 }
             }
         }
