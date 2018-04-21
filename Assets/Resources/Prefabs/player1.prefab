@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23269385646569838}
   - component: {fileID: 114722438382520186}
   - component: {fileID: 54489702054119908}
+  - component: {fileID: 114841054047654348}
   m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
@@ -112,6 +113,18 @@ MonoBehaviour:
   walkSpeed: 10
   axisHoriz: P1Horizontal
   axisVert: P1Vertical
+--- !u!114 &114841054047654348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132237385213398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd3915e40a9754bbec6104f668ff9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonCollect: P1Collect
 --- !u!135 &135108549445601000
 SphereCollider:
   m_ObjectHideFlags: 1
