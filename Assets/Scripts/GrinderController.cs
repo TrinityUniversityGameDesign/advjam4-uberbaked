@@ -19,7 +19,7 @@ public class GrinderController : MonoBehaviour {
     {
         for (int i = 1; i < 5; ++i)
         {
-            if (Input.GetButtonDown("P" + i + "Collect"))
+            if (Input.GetButtonDown("P" + i + "Collect") && collision.transform.Find("WeedContainer(Clone)") != null)
             {
                 NugDetails weednug = collision.transform.Find("WeedContainer(Clone)").GetComponent<NugDetails>();
                 weednug.currentState = NugDetails.State.Grinded;

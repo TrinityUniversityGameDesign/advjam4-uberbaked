@@ -17,6 +17,8 @@ public class collection : MonoBehaviour {
 	void Update () {
         if (iscarrying && Input.GetButtonDown(buttonRelease))
         {
+            transform.Find("WeedContainer(Clone)").GetComponent<Rigidbody>().useGravity = true;
+            transform.Find("WeedContainer(Clone)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             transform.Find("WeedContainer(Clone)").parent = null;
             // transform.DetachChildren();
             iscarrying = false;
@@ -38,13 +40,10 @@ public class collection : MonoBehaviour {
                 Debug.Log("collected! :)");
                 collision.transform.parent = transform;
                 iscarrying = true;
+                transform.Find("WeedContainer(Clone)").GetComponent<Rigidbody>().useGravity = false;
+                transform.Find("WeedContainer(Clone)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             }
         }
-        if (iscarrying && Input.GetButtonDown(buttonRelease))
-        {
-            collision.transform.parent = null;
-           // transform.DetachChildren();
-            iscarrying = false;
-        }
+        
     }
 }
