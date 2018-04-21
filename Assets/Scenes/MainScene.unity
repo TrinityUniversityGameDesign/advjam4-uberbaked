@@ -517,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 203bff2df7c7549cfa6de24a903131ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   timer: 0
   timerText: {fileID: 1264413598}
 --- !u!1 &1264413596
@@ -529,6 +530,7 @@ GameObject:
   - component: {fileID: 1264413597}
   - component: {fileID: 1264413599}
   - component: {fileID: 1264413598}
+  - component: {fileID: 1264413600}
   m_Layer: 5
   m_Name: TimerTag
   m_TagString: Untagged
@@ -543,7 +545,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1264413596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -92}
+  m_LocalPosition: {x: 0, y: 0, z: -98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1128663163}
@@ -551,8 +553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -14, y: -118}
-  m_SizeDelta: {x: 397, y: 55}
+  m_AnchoredPosition: {x: -16, y: -112}
+  m_SizeDelta: {x: 559, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264413598
 MonoBehaviour:
@@ -586,13 +588,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Time Left 60 Seconds
+  m_Text: 'Time Left 60 Seconds
+
+    Score 0'
 --- !u!222 &1264413599
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1264413596}
+--- !u!114 &1264413600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264413596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2075305546
 GameObject:
   m_ObjectHideFlags: 0

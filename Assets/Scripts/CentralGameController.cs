@@ -27,7 +27,7 @@ public class CentralGameController : MonoBehaviour {
 	void Update () {
         timer -= Time.deltaTime;
         Debug.Log(timer);
-        timerText.text = "Time Left: " + Mathf.FloorToInt(timer) + " seconds";
+        timerText.text = "Time Left: " + Mathf.FloorToInt(timer) + " seconds\nScore: " + score;
 
         if(timer < 0){
             //GameOver
