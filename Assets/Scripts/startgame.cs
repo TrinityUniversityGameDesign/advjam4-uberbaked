@@ -14,7 +14,7 @@ public class startgame : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown(buttonStart))
         {
-            SceneManager.LoadScene("playermovement");
+            SceneManager.LoadScene("MainScene");
         }
 	}
 

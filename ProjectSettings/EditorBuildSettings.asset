@@ -9,5 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/introscene.unity
     guid: b8c0c006567001a4b8305b769bc37fd5
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 1a2c96b2f10e79b4ba0e9de58bf3cd3d
+  - enabled: 0
     path: Assets/Scenes/playermovement.unity
     guid: 38712ae4a698a9d4cadccd2faab636e6
+  - enabled: 1
+    path: Assets/Scenes/PlayerLose.unity
+    guid: dd9cd46e24ab74fdeabfea5857270b8b
+  - enabled: 1
+    path: Assets/Scenes/PlayerWin.unity
+    guid: 38e17285c4165440e826d7b221868b29
