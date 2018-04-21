@@ -29,6 +29,10 @@ public class collection : MonoBehaviour {
     {
         iscarrying = true;
     }
+    public void unsetCarry()
+    {
+        iscarrying = false;
+    }
 
     private void OnCollisionStay(Collision collision)
     {

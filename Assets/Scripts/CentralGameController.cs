@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CentralGameController : MonoBehaviour {
 
-    int score;
+    public int score;
     public float timer;
     int goalScore;
 
