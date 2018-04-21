@@ -7,7 +7,7 @@ public class collection : MonoBehaviour {
     public string buttonCollect;
     public string buttonRelease;
     private Rigidbody theRigidbody;
-    private bool iscarrying;
+    public bool iscarrying;
 	// Use this for initialization
 	void Start () {
         theRigidbody = GetComponent<Rigidbody>();
@@ -52,7 +52,7 @@ public class collection : MonoBehaviour {
     }
     private void OnCollisionExit(Collision collision){
        if(collision.gameObject.tag == "Grinder" || collision.gameObject.tag == "Rolling" || collision.gameObject.tag == "Deliver" || collision.gameObject.tag == "Strain"){
-            collision.gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Default");
+            collision.gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
         }
     }
 }
