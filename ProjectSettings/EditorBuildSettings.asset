@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 1a2c96b2f10e79b4ba0e9de58bf3cd3d
+  - enabled: 1
+    path: Assets/Scenes/SecondLevel.unity
+    guid: aad1087a4a1f71546a062d71b7b51b4c
   - enabled: 0
     path: Assets/Scenes/playermovement.unity
     guid: 38712ae4a698a9d4cadccd2faab636e6

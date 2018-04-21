@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629999030461178}
   - component: {fileID: 114235778284755438}
+  - component: {fileID: 114928251274675622}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392378875441082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 556d3dbec3cae499f9f89563ff0c26a4, type: 3}
   m_Name: 
@@ -61,5 +62,34 @@ MonoBehaviour:
   deliverOrig: {fileID: 1239176950231874, guid: e8f04997b427746899e2d81f1f85e72a,
     type: 2}
   tile: {fileID: 0}
-  player: {fileID: 1132237385213398, guid: 0ad40eb40443c1b4aa00b5b807bb0581, type: 2}
+  player1: {fileID: 1166548263015992, guid: 9a97e3c7b1776d64eab0d9b4448c071f, type: 2}
+  player2: {fileID: 1198769215884074, guid: 97f708849584863468f17d3b8b286917, type: 2}
+  player3: {fileID: 1879691531915010, guid: 56b4a26c2ec3b544b95628c2e83ef223, type: 2}
+  player4: {fileID: 1260601343869510, guid: c1c24cbf5dcc7ee4091700426074c9f2, type: 2}
+  boardHolder: {fileID: 0}
+--- !u!114 &114928251274675622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392378875441082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8480f5e18a521401c9d30cab2e324b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  row: 0
+  col: 0
+  wallOrig: {fileID: 1021954215591282, guid: 38371595024294a2b89c0ab75e6933af, type: 2}
+  floorOrig: {fileID: 1678388862942128, guid: adb3489fe5b914b2d8930ff07eaa09f4, type: 2}
+  boxOrig: {fileID: 1151097451577318, guid: 6e1ea5bce23aa4e5fb1de9490df1f8d4, type: 2}
+  grindOrig: {fileID: 1655146342008348, guid: 12e36ba2b6d2a4956a73d75f689deef5, type: 2}
+  rollOrig: {fileID: 1525583296928008, guid: 7ff4e82059689479eb805fab41b824f0, type: 2}
+  deliverOrig: {fileID: 1239176950231874, guid: e8f04997b427746899e2d81f1f85e72a,
+    type: 2}
+  tile: {fileID: 0}
+  player1: {fileID: 1166548263015992, guid: 9a97e3c7b1776d64eab0d9b4448c071f, type: 2}
+  player2: {fileID: 1198769215884074, guid: 97f708849584863468f17d3b8b286917, type: 2}
+  player3: {fileID: 1879691531915010, guid: 56b4a26c2ec3b544b95628c2e83ef223, type: 2}
+  player4: {fileID: 1260601343869510, guid: c1c24cbf5dcc7ee4091700426074c9f2, type: 2}
   boardHolder: {fileID: 0}
