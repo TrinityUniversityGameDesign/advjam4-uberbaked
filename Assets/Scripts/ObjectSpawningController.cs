@@ -5,11 +5,12 @@ using UnityEngine;
 public class ObjectSpawningController : MonoBehaviour {
 
     GameObject nug;
+
     List<GameObject> items = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
-
+        
         nug = Resources.Load("Prefabs/WeedContainer") as GameObject;
         //item = Instantiate(item) as GameObject;
         //CreateNug(); //new Vector3(0,0,0));
@@ -17,9 +18,11 @@ public class ObjectSpawningController : MonoBehaviour {
         //CreateNug();
 	}
 
-    public void CreateNug() { // Vector3 loc){
-        GameObject tempNug = Instantiate(nug) as GameObject; //,loc,Quaternion.Euler(0,0,0)) as GameObject;
-        tempNug.GetComponent<Rigidbody>().AddForce(new Vector3(1,0,0));
+    public void CreateNug(Transform c) { // Vector3 loc)
+        //Vector3 spawn = transform.parent.position;
+        GameObject tempNug = Instantiate(nug, c);// new Vector3(spawn.x,spawn.y+1,spawn.z),Quaternion.identity) as GameObject; //,loc,Quaternion.Euler(0,0,0)) as GameObject;
+        c.GetComponent<collection>().setCarry();
+        //tempNug.GetComponent<Rigidbody>().AddForce(new Vector3(0,10,0);
         items.Add(tempNug);
     }
 
@@ -35,8 +38,16 @@ public class ObjectSpawningController : MonoBehaviour {
         //CreateNug();
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        CreateNug();
+        for (int i = 1; i < 5; ++i)
+        {
+            if (Input.GetButtonDown("P" + i + "Collect"))
+            {
+                CreateNug(collision.transform);
+            }
+        }
+      
     }
 }
+

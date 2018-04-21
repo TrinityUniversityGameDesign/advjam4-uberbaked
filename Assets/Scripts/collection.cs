@@ -15,8 +15,18 @@ public class collection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (iscarrying && Input.GetButtonDown(buttonRelease))
+        {
+            transform.Find("WeedContainer(Clone)").parent = null;
+            // transform.DetachChildren();
+            iscarrying = false;
+        }
+    }
+
+    public void setCarry()
+    {
+        iscarrying = true;
+    }
 
     private void OnCollisionStay(Collision collision)
     {

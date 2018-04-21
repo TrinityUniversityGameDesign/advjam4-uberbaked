@@ -14,7 +14,10 @@ public class GenerateWorld : MonoBehaviour {
 	public GameObject rollOrig;
 	public GameObject deliverOrig;
 	public GameObject tile;
-	public GameObject player;
+	public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
 	public int[,] grid;
 
 	public GameObject boardHolder;
@@ -29,9 +32,12 @@ public class GenerateWorld : MonoBehaviour {
 	}
 
 	void addPlayers(){
-		Vector3 spawn = new Vector3(3f,5f,0f);
-		Instantiate(player,spawn,Quaternion.identity);
-	}
+		Vector3 spawn = new Vector3(3f,3.2f,0f);
+		Instantiate(player1,spawn,Quaternion.identity);
+        Instantiate(player2, spawn, Quaternion.identity);
+        Instantiate(player3, spawn, Quaternion.identity);
+        Instantiate(player4, spawn, Quaternion.identity);
+    }
 
 	void Update(){
 		 if (Input.GetKeyDown(KeyCode.Space)){
