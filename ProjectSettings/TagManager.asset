@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - collectme
+  - Grinder
+  - Deliver
+  - Strain
+  - Rolling
   layers:
   - Default
   - TransparentFX
