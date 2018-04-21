@@ -32,6 +32,10 @@ public class collection : MonoBehaviour {
 
     private void OnCollisionStay(Collision collision)
     {
+        if(collision.gameObject.tag == "Grinder" || collision.gameObject.tag == "Rolling" || collision.gameObject.tag == "Deliver" || collision.gameObject.tag == "Strain"){
+            collision.gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Custom/HighlightShader");
+        }
+
         if (collision.gameObject.tag == "collectme" && collision.transform.parent == null)
         {
             Debug.Log("there she goes");
@@ -45,5 +49,10 @@ public class collection : MonoBehaviour {
             }
         }
         
+    }
+    private void OnCollisionExit(Collision collision){
+       if(collision.gameObject.tag == "Grinder" || collision.gameObject.tag == "Rolling" || collision.gameObject.tag == "Deliver" || collision.gameObject.tag == "Strain"){
+            collision.gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Default");
+        }
     }
 }
