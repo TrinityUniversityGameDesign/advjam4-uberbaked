@@ -14,6 +14,7 @@ public class GenerateWorld : MonoBehaviour {
 	public GameObject rollOrig;
 	public GameObject deliverOrig;
 	public GameObject tile;
+	public GameObject player;
 	public int[,] grid;
 
 	public GameObject boardHolder;
@@ -24,6 +25,12 @@ public class GenerateWorld : MonoBehaviour {
 		col = 10;
 		createWorld();
 		addToWorld();
+		addPlayers();
+	}
+
+	void addPlayers(){
+		Vector3 spawn = new Vector3(3f,5f,0f);
+		Instantiate(player,spawn,Quaternion.identity);
 	}
 
 	void Update(){
@@ -90,6 +97,7 @@ public class GenerateWorld : MonoBehaviour {
         			
 				tile.transform.parent = boardHolder.transform;
 			}
+
 		}
 		boardHolder.transform.Rotate(-90f,0f,0f);   
 	}

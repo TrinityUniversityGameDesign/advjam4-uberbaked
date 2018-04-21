@@ -61,4 +61,5 @@ MonoBehaviour:
   deliverOrig: {fileID: 1239176950231874, guid: e8f04997b427746899e2d81f1f85e72a,
     type: 2}
   tile: {fileID: 0}
+  player: {fileID: 1132237385213398, guid: 0ad40eb40443c1b4aa00b5b807bb0581, type: 2}
   boardHolder: {fileID: 0}
