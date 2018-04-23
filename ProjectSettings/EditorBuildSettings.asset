@@ -13,6 +13,12 @@ EditorBuildSettings:
     guid: 1a2c96b2f10e79b4ba0e9de58bf3cd3d
   - enabled: 1
     path: Assets/Scenes/SecondLevel.unity
+    guid: 772abecf2ff88b54bb88844add0432e8
+  - enabled: 1
+    path: Assets/Scenes/ThirdLevel.unity
+    guid: 26a5a3335a663064fb36d00741598f6e
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/aad1087a4a1f71546a062d71b7b51b4c
     guid: aad1087a4a1f71546a062d71b7b51b4c
   - enabled: 0
     path: Assets/Scenes/playermovement.unity
@@ -23,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerWin.unity
     guid: 38e17285c4165440e826d7b221868b29
+  - enabled: 1
+    path: Assets/Scenes/PlayerWinSecondLevel.unity
+    guid: 7c10c12d7ca21e049b23727cfe26f79a

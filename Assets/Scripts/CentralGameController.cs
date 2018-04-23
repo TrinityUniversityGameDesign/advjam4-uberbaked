@@ -32,7 +32,16 @@ public class CentralGameController : MonoBehaviour {
         if(timer < 0){
             //GameOver
             if(score >= goalScore){
-                SceneManager.LoadScene("PlayerWin");
+                
+                if(SceneManager.GetActiveScene().name == "SecondLevel")
+                {
+                    SceneManager.LoadScene("PlayerWinSecondLevel");
+                }
+                else
+                {
+                    SceneManager.LoadScene("PlayerWin");
+                }
+               
             } else {
                 SceneManager.LoadScene("PlayerLose");
             }
